@@ -59,6 +59,7 @@ namespace HajosTeszt
             }*/
 
             StreamReader sr = new StreamReader("hajozasi_szabalyzat_kerdessor_BOM.txt", true);
+
             while (!sr.EndOfStream)
             {
                 string sor = sr.ReadLine() ?? "n/a";
@@ -84,7 +85,52 @@ namespace HajosTeszt
 
         private void következõ1_Click(object sender, EventArgs e)
         {
+            Aktuáliskérdés++;
+
+            if (Aktuáliskérdés == 7)
+            {
+                Aktuáliskérdés = 0;
+            }
+
+            Kérdésmegjelenítés(Aktuáliskérdések[Aktuáliskérdés]);
+
+            válaszGomb1.BackColor = Color.Gray;
+            válaszGomb2.BackColor = Color.Gray;
+            válaszGomb3.BackColor = Color.Gray;
+            válaszGomb1.Enabled = true;
+            válaszGomb2.Enabled = true;
+            válaszGomb3.Enabled = true;
+        }
+
+        private void válaszGomb1_Click(object sender, EventArgs e)
+        {
+            válaszGomb1.BackColor = Color.Red;
+            Színez();
+        }
+
+        private void válaszGomb2_Click(object sender, EventArgs e)
+        {
+            válaszGomb2.BackColor = Color.Red;
+            Színez();
+        }
+
+        private void válaszGomb3_Click(object sender, EventArgs e)
+        {
+            válaszGomb3.BackColor = Color.Red;
+            Színez();
+        }
+
+        void Színez()
+        {
+            if (Aktuáliskérdések[Aktuáliskérdés].HelyesVálasz == 1) válaszGomb1.BackColor = Color.Green;
+            if (Aktuáliskérdések[Aktuáliskérdés].HelyesVálasz == 2) válaszGomb2.BackColor = Color.Green;
+            if (Aktuáliskérdések[Aktuáliskérdés].HelyesVálasz == 3) válaszGomb3.BackColor = Color.Green;
+            válaszGomb1.Enabled = false;
+            válaszGomb2.Enabled = false;
+            válaszGomb3.Enabled = false;
 
         }
+
+
     }
 }
