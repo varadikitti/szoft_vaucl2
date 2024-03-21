@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci", "Fibonacci\Fibo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pascal", "Pascal\Pascal.csproj", "{F4D6A8BA-D390-45CD-8754-2C24B2E443BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HajosTeszt", "HajosTeszt\HajosTeszt.csproj", "{E13B6D62-A99B-4689-828F-3C90D270C66E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HajosTeszt", "HajosTeszt\HajosTeszt.csproj", "{E13B6D62-A99B-4689-828F-3C90D270C66E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snake", "snake\snake.csproj", "{7724DA4D-68EE-475B-9511-145560DB2668}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E13B6D62-A99B-4689-828F-3C90D270C66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E13B6D62-A99B-4689-828F-3C90D270C66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E13B6D62-A99B-4689-828F-3C90D270C66E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7724DA4D-68EE-475B-9511-145560DB2668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7724DA4D-68EE-475B-9511-145560DB2668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7724DA4D-68EE-475B-9511-145560DB2668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7724DA4D-68EE-475B-9511-145560DB2668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
