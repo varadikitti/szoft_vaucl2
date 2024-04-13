@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64D3C513-F03E-47B9-A55D-BCF4A2EEA443}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mintaZh2</RootNamespace>
+    <AssemblyName>mintaZh2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=31.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.31.0.3\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CountryData.cs" />
+    <Compile Include="Elements.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCountryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCountryEdit.Designer.cs">
+      <DependentUpon>FormCountryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCountryEdit.resx">
+      <DependentUpon>FormCountryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="european_countries.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CountryData.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ArrayHelper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.BadDataException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.BadDataFound.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.BadDataFoundArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.AllowCommentsAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.BooleanFalseValuesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.BooleanTrueValuesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.BufferSizeAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.CacheFieldsAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.CommentAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.ConstantAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.CountBytesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.CultureInfoAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DateTimeStylesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DefaultAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DelimiterAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DetectColumnCountChangesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DetectDelimiterAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.DetectDelimiterValuesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.EncodingAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.EnumIgnoreCaseAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.EscapeAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.ExceptionMessagesContainRawDataAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.FormatAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.HasHeaderRecordAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.HeaderPrefixAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IClassMapper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IgnoreAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IgnoreBaseAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IgnoreBlankLinesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IgnoreReferencesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IMemberMapper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IMemberReferenceMapper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IncludePrivateMembersAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IndexAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.InjectionCharactersAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.InjectionEscapeCharacterAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.InjectionOptionsAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IParameterMapper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.IParameterReferenceMapper.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.LineBreakInQuotedFieldIsBadDataAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.MaxFieldSizeAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.MemberTypesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.ModeAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.NameAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.NameIndexAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.NewLineAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.NullValuesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.NumberStylesAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.OptionalAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.ProcessFieldBufferSizeAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.QuoteAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.TrimOptionsAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.TypeConverterAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.UseNewObjectForNullReferenceMembersAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.Attributes.WhiteSpaceCharsAttribute.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ClassMap.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ClassMapCollection.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ConfigurationException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ConfigurationFunctions.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.CsvConfiguration.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.IParserConfiguration.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.IReaderConfiguration.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.IWriterConfiguration.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberMap.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberMapCollection.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberMapData.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberMapTypeConverterOption.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberNameCollection.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberReferenceMap.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberReferenceMapCollection.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.MemberReferenceMapData.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ParameterMap.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ParameterMapData.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ParameterMapTypeConverterOption.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ParameterReferenceMap.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Configuration.ParameterReferenceMapData.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ConvertFromStringArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvContext.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvDataReader.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvHelperException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvParser.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvReader.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.CsvWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Delegates.GetDelimiter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Delegates.GetDelimiterArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.DynamicRecordCreator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.DynamicRecordWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.ExpandoObjectRecordWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.ExpressionManager.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.ObjectRecordCreator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.ObjectRecordWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.PrimitiveRecordCreator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.PrimitiveRecordWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordCreator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordCreatorFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordHydrator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordManager.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Expressions.RecordWriterFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Factory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.FieldValidationException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.GetConstructor.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.GetConstructorArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.GetDynamicPropertyName.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.GetDynamicPropertyNameArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.HeaderValidated.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.HeaderValidatedArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.HeaderValidationException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.InvalidHeader.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IObjectResolver.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IParser.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IReader.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IReaderRow.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IWriter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.IWriterRow.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.MaxFieldSizeException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.MissingFieldException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.MissingFieldFound.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.MissingFieldFoundArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ObjectCreator.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ObjectResolver.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ParserException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.PrepareHeaderForMatch.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.PrepareHeaderForMatchArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReaderException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReadingExceptionOccurred.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReadingExceptionOccurredArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReferenceHeaderPrefix.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReferenceHeaderPrefixArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ReflectionExtensions.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldQuote.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldQuoteArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldSkipRecord.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldSkipRecordArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldUseConstructorParameters.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ShouldUseConstructorParametersArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.ArrayConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.BigIntegerConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.BooleanConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.ByteArrayConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.ByteConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.CharConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.CollectionConverterFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.CollectionGenericConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.DateTimeConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.DateTimeOffsetConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.DecimalConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.DefaultTypeConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.DoubleConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.EnumConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.EnumConverterFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.EnumerableConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.GuidConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.IDictionaryConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.IDictionaryGenericConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.IEnumerableConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.IEnumerableGenericConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.Int16Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.Int32Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.Int64Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.ITypeConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.ITypeConverterFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.NullableConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.NullableConverterFactory.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.SByteConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.SingleConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.StringConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.TimeSpanConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.TypeConverterCache.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.TypeConverterException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.TypeConverterOptions.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.TypeConverterOptionsCache.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.UInt16Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.UInt32Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.UInt64Converter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.TypeConversion.UriConverter.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.Validate.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ValidateArgs.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ValidateMessage.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.ValidationException.datasource" />
+    <None Include="Properties\DataSources\CsvHelper.WriterException.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
