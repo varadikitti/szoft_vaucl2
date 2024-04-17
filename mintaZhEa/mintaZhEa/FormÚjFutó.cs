@@ -20,11 +20,7 @@ namespace mintaZhEa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormÚjFutó formÚjFutó = new FormÚjFutó();
-            if (formÚjFutó.ShowDialog() == DialogResult.OK)
-            {
 
-            }
         }
 
         private void FormÚjFutó_Load(object sender, EventArgs e)

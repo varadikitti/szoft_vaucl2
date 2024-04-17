@@ -48,7 +48,7 @@
             button1.Name = "button1";
             button1.Size = new Size(112, 34);
             button1.TabIndex = 0;
-            button1.Text = "Ok";
+            button1.Text = "&Ok";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -60,7 +60,7 @@
             button2.Name = "button2";
             button2.Size = new Size(112, 34);
             button2.TabIndex = 1;
-            button2.Text = "Cancel";
+            button2.Text = "&Cancel";
             button2.UseVisualStyleBackColor = true;
             // 
             // textBox1

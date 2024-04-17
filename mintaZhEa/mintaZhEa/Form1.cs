@@ -79,7 +79,7 @@ namespace mintaZhEa
             FormÚjFutó formÚjFutó = new FormÚjFutó();
             if (formÚjFutó.ShowDialog() == DialogResult.OK)
             {
-                futókBindingSource.Add(formÚjFutó.ÚjFutó);
+                //futókBindingSource.Add(formÚjFutó.ÚjFutó);//
             }
         }
 

@@ -147,7 +147,7 @@
             button4.Name = "button4";
             button4.Size = new Size(112, 34);
             button4.TabIndex = 5;
-            button4.Text = "Valami";
+            button4.Text = "Új";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
