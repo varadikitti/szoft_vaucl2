@@ -33,16 +33,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.uriConverterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.populationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaInSquareKmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.uriConverterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countryDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uriConverterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryDataBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uriConverterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,10 +94,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // uriConverterBindingSource
-            // 
-            this.uriConverterBindingSource.DataSource = typeof(CsvHelper.TypeConversion.UriConverter);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -125,6 +122,10 @@
             // 
             this.countryDataBindingSource1.DataSource = typeof(mintaZh2.CountryData);
             // 
+            // uriConverterBindingSource
+            // 
+            this.uriConverterBindingSource.DataSource = typeof(CsvHelper.TypeConversion.UriConverter);
+            // 
             // countryDataBindingSource
             // 
             this.countryDataBindingSource.DataSource = typeof(mintaZh2.CountryData);
@@ -139,11 +140,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(230, 372);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(135, 38);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Új";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
@@ -153,8 +165,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uriConverterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryDataBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uriConverterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,6 +185,7 @@
         private System.Windows.Forms.BindingSource countryDataBindingSource1;
         private System.Windows.Forms.BindingSource countryDataBindingSource;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

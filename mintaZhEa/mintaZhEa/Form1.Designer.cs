@@ -42,6 +42,7 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)futókBindingSource).BeginInit();
             SuspendLayout();
@@ -55,7 +56,7 @@
             dataGridView1.Location = new Point(12, 213);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(776, 225);
+            dataGridView1.Size = new Size(806, 333);
             dataGridView1.TabIndex = 0;
             // 
             // versenyzoIDDataGridViewTextBoxColumn
@@ -157,15 +158,26 @@
             button5.Name = "button5";
             button5.Size = new Size(112, 34);
             button5.TabIndex = 6;
-            button5.Text = "button5";
+            button5.Text = "Számolósdi";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(706, 138);
+            button6.Name = "button6";
+            button6.Size = new Size(112, 34);
+            button6.TabIndex = 7;
+            button6.Text = "Szerkesztés";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(865, 450);
+            ClientSize = new Size(928, 558);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -197,5 +209,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private Button button6;
     }
 }

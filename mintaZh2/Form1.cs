@@ -40,9 +40,9 @@ namespace mintaZh2
 
                 sr.Close();
             }
-            catch (Exception x)
+            catch (Exception ex)
             {
-                MessageBox.Show("message");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -68,15 +68,42 @@ namespace mintaZh2
             fce.Show();
         }
 
+        //save
         private void button4_Click(object sender, EventArgs e)
         {
-            using (var writer = new StreamWriter("european_countries.csv"))
-            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-            {
+            //using (var writer = new StreamWriter("european_countries.csv"))
+            //using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            //{
                 // Write records to the CSV file
-                csv.WriteRecords(countryList);
-            };
-            Close();
+            //    csv.WriteRecords(countryList);
+            //};
+            //Close();
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
+                    var csv = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
+                    csv.WriteRecord(countryList);
+                    streamWriter.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormNewCountry formNewCountry = new FormNewCountry();
+            if (formNewCountry.ShowDialog() == DialogResult.OK)
+            {
+                countryDataBindingSource.Add(formNewCountry.NewCountry);
+            }
         }
     }
 }

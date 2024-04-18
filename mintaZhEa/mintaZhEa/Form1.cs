@@ -79,7 +79,7 @@ namespace mintaZhEa
             FormÚjFutó formÚjFutó = new FormÚjFutó();
             if (formÚjFutó.ShowDialog() == DialogResult.OK)
             {
-                //futókBindingSource.Add(formÚjFutó.ÚjFutó);//
+                futókBindingSource.Add(formÚjFutó.ÚjFutó);
             }
         }
 
@@ -87,7 +87,7 @@ namespace mintaZhEa
         {
             //double összeg = 0;//
             //int darab = 0;//
-            double minimum  = double.PositiveInfinity;
+            double minimum = double.PositiveInfinity;
             string leggyorsabb = string.Empty;
 
             foreach (var item in futók)
@@ -104,6 +104,15 @@ namespace mintaZhEa
 
             //double átlag = összeg / darab;
             MessageBox.Show($"A legjobb idõ {minimum}");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (futókBindingSource.Current == null) return;
+            FormEdit formEdit = new FormEdit();
+            //formEdit.ÚjFutó = FutókfutókBindingSource.Current as Futók;
+            formEdit.Show();
+
         }
     }
 }

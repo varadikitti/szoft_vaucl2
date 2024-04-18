@@ -85,6 +85,12 @@
     <Compile Include="FormCountryEdit.Designer.cs">
       <DependentUpon>FormCountryEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNewCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewCountry.Designer.cs">
+      <DependentUpon>FormNewCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCountryEdit.resx">
       <DependentUpon>FormCountryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewCountry.resx">
+      <DependentUpon>FormNewCountry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
