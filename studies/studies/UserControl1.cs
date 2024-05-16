@@ -32,6 +32,7 @@ namespace studies
 
             //fun facts: hány elemből/instruktorból áll a tábla, ami az instruktorokat tartalmazza?
             var oktatoSzam = context.Instructors.Count();
+            label1.Text = "Oktatók száma: " + oktatoSzam.ToString();
 
             //fun facts: melyik a legmagasabb státusz az adatbázisban?
             var legmagasabbStatus = (from x in context.Instructors
