@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0A09A5E-4B0B-4FA3-B1A3-2AFB2740FE40}</ProjectGuid>
+    <ProjectGuid>{A152EB7E-206A-4159-B057-9319FBA6306C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>memorygame2</RootNamespace>
-    <AssemblyName>memorygame2</AssemblyName>
+    <RootNamespace>memory_again</RootNamespace>
+    <AssemblyName>memory_again</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

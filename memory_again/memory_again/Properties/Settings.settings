@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="memory_again.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="hatterkep" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/peanuts/background.jpg</Value>
+    </Setting>
+    <Setting Name="konyvtar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/peanuts</Value>
+    </Setting>
+    <Setting Name="kiterjesztes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.jpg</Value>
+    </Setting>
+    <Setting Name="meret" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">95</Value>
+    </Setting>
+    <Setting Name="tavolsag" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

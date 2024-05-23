@@ -14,6 +14,13 @@ namespace memorygame2
     {
         kartya elozoKartya;
 
+        public int size = 2;
+        int timeSpent;
+        public int jo;
+        public int kezd;
+
+        List<kartya> szamolo = new List<kartya>();
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,41 +32,65 @@ namespace memorygame2
             Width = BackgroundImage.Width;
             Height = BackgroundImage.Height;
 
-            int sorSzam = 0;
-            int[] t = Keveres(16);
-
-
-            for (int s = 0; s < 4; s++)
-            {
-                for (int o = 0; o < 4; o++)
-                {
-                    kartya k = new kartya(s, o, t[sorSzam]);
-                    Controls.Add(k);
-
-                    k.Click += K_Click;
-                    sorSzam++;
-                }
-            }
+            listBox1.Items.Add("Easy");
+            listBox1.Items.Add("Medium");
+            listBox1.Items.Add("Hard");            
         }
 
         private void K_Click(object sender, EventArgs e)
         {
+            kezd++;
+            if (kezd == 1)
+            {
+                timer1.Start();
+            }
+
+            //MessageBox.Show(kezd.ToString());
+            
+
             if (sender is kartya)
             {
                 kartya k = (kartya)sender;
 
-                if (elozoKartya != null) 
+                if (szamolo.Count() <= 1 )
+                {
+                    k.Felfordit();
+                    szamolo.Add(k);
+                }
+                else
+                {
+                    foreach (var v in szamolo)
+                    {
+                        v.Lefordit();
+                    }
+                    szamolo.Clear();
+                    k.Felfordit();
+                    szamolo.Add(k);
+                }
+
+                if (kezd%2 == 0 && elozoKartya != null)
                 {
                     if (k.kintKepSzam == elozoKartya.kintKepSzam && k != elozoKartya)
                     {
                         k.Visible = false;
                         elozoKartya.Visible = false;
+                        jo++;
                     }
                 }
                 elozoKartya = k;
-
             }
-            
+
+            label2.Text = jo.ToString();
+            label3.Text = (kezd / 2 - jo).ToString();
+
+            if (jo == (size * size) / 2)
+            {
+                timer1.Stop();
+                MessageBox.Show($"Congratulations! # of good answers: {jo}, and the # of bad answers: {kezd / 2 - jo}. Select a harder mode it was too easy for you! :)");
+                timeSpent = 0;
+                kezd = 0;
+                jo = 0;
+            }
         }
 
         int[] Keveres(int kartyaSzam)
@@ -74,7 +105,7 @@ namespace memorygame2
 
             Random rnd = new Random();
 
-            for (int i = 0; i < kartyaSzam; i++)
+            for (int i = 1; i < kartyaSzam; i++)
             {
                 int egyik = rnd.Next(kartyaSzam);
                 int masik = rnd.Next(kartyaSzam);
@@ -85,6 +116,67 @@ namespace memorygame2
             }
 
             return tomb;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == 0)
+            {
+                size = 2;
+            }
+            else if (listBox1.SelectedIndex == 1)
+            {
+                size = 4;
+            }
+            else
+            {
+                size = 6;
+            }
+            
+            //MessageBox.Show(size.ToString());
+
+            int sorSzam = 0;
+            panel1.Controls.Clear();
+            int[] t = Keveres(size * size);
+
+
+            for (int s = 0; s < size; s++)
+            {
+                for (int o = 0; o < size; o++)
+                {
+                    kartya k = new kartya(s, o, t[sorSzam]);
+                    panel1.Controls.Add(k);
+
+                    k.Click += K_Click;
+                    sorSzam++;
+                }
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timeSpent++;
+            label1.Text = "Time Spent: " + timeSpent.ToString() + " seconds";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

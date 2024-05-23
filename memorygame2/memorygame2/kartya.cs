@@ -21,36 +21,29 @@ namespace memorygame2
             Height = Properties.Settings.Default.kepMeret;
             Width = Properties.Settings.Default.kepMeret;
 
-            Left = oszlop * Properties.Settings.Default.kepTavolsag;
-            Top = sor * Properties.Settings.Default.kepTavolsag;
+            Left = oszlop * Properties.Settings.Default.kepTavolsag + 20;
+            Top = sor * Properties.Settings.Default.kepTavolsag + 20;
 
             Lefordit();
             //Felfordit();
 
             this.Click += Kartya_Click;
-            timer.Interval = 2000;
-            timer.Tick += Timer_Tick;
-
-        }
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            Lefordit();
-            timer.Stop();
+            //timer.Interval = 1000;
+            //timer.Tick += Timer_Tick;
         }
 
         private void Kartya_Click(object sender, EventArgs e)
         {
             Felfordit();
-            timer.Start();
+            //timer.Start();
         }
 
-        void Felfordit()
+        public void Felfordit()
         {
             Image = Bitmap.FromFile(Properties.Settings.Default.kepKonyvtar + kintKepSzam.ToString() + Properties.Settings.Default.kepUtotag);
         }
 
-        void Lefordit()
+        public void Lefordit()
         {
             Image = Bitmap.FromFile(Properties.Settings.Default.kepKonyvtar + "card_back" + Properties.Settings.Default.kepUtotag);
         }

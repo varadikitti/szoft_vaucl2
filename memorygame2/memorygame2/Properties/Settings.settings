@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="hatterkep" Type="System.String" Scope="User">
-      <Value Profile="(Default)">peanuts/background2.jpg</Value>
+      <Value Profile="(Default)">peanuts/background.jpg</Value>
     </Setting>
     <Setting Name="kepKonyvtar" Type="System.String" Scope="User">
       <Value Profile="(Default)">peanuts/</Value>

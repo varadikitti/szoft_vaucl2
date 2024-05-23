@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace memorygame2.Properties {
+namespace memory_again.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,7 +25,7 @@ namespace memorygame2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("peanuts/background.jpg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/peanuts/background.jpg")]
         public string hatterkep {
             get {
                 return ((string)(this["hatterkep"]));
@@ -37,61 +37,49 @@ namespace memorygame2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("peanuts/")]
-        public string kepKonyvtar {
+        [global::System.Configuration.DefaultSettingValueAttribute("/peanuts")]
+        public string konyvtar {
             get {
-                return ((string)(this["kepKonyvtar"]));
+                return ((string)(this["konyvtar"]));
             }
             set {
-                this["kepKonyvtar"] = value;
+                this["konyvtar"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(".jpg")]
-        public string kepUtotag {
+        public string kiterjesztes {
             get {
-                return ((string)(this["kepUtotag"]));
+                return ((string)(this["kiterjesztes"]));
             }
             set {
-                this["kepUtotag"] = value;
+                this["kiterjesztes"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("95")]
-        public int kepMeret {
+        public int meret {
             get {
-                return ((int)(this["kepMeret"]));
+                return ((int)(this["meret"]));
             }
             set {
-                this["kepMeret"] = value;
+                this["meret"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int kepTavolsag {
+        public int tavolsag {
             get {
-                return ((int)(this["kepTavolsag"]));
+                return ((int)(this["tavolsag"]));
             }
             set {
-                this["kepTavolsag"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
-            }
-            set {
-                this["Setting"] = value;
+                this["tavolsag"] = value;
             }
         }
     }
