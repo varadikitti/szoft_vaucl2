@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "zh1again_gyak/1.0.0": {
+        "runtime": {
+          "zh1again_gyak.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "zh1again_gyak/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
