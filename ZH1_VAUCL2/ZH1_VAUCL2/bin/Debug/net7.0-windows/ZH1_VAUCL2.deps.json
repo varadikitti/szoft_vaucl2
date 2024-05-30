@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ZH1_VAUCL2/1.0.0": {
+        "runtime": {
+          "ZH1_VAUCL2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZH1_VAUCL2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
